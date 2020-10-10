@@ -1,10 +1,16 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
+
 
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+   plugins: [
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `pacifico`,
+          `lato\:100,400`
+        ],
+        display: 'swap'
+      }
+    }
+  ]
 }
