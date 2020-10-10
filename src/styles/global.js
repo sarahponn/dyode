@@ -157,7 +157,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 4px;
   }
 
-  .bJnJcz, .fYZyZu {
+  .bJnJcz, .dqiHaH {
     width: 100%;
   }
 
