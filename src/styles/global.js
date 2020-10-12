@@ -52,13 +52,6 @@ const GlobalStyle = createGlobalStyle`
     display: block;
   }
 
-  @media screen and (min-width: 35em) {
-    html {
-      margin-right: calc(-100vw + 100%);
-      overflow-x: hidden;
-    }
-  }
-
   ol, ul, li {
     list-style: none;
   }
@@ -157,14 +150,25 @@ const GlobalStyle = createGlobalStyle`
     margin: 4px;
   }
 
-  .bJnJcz, .dqiHaH {
+  .bpmem, .dqiHaH {
     width: 100%;
   }
 
   .BrainhubCarousel__dots .BrainhubCarousel__dot {
-    @media screen and (max-width: 900px) {
-      padding: 3px;
+    padding: 4px;
+
+  }
+
+  @media screen and (min-width: 900px) {
+    html {
+      margin-right: calc(-100vw + 100%);
+      overflow-x: hidden;
+    }
+    .BrainhubCarousel__dots .BrainhubCarousel__dot  {
+      padding: 15px;
     }
   }
+
+
 `
 export default GlobalStyle

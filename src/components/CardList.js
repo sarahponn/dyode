@@ -7,14 +7,15 @@ const List = styled.ul`
   justify-content: center;
   padding: 0;
   margin: 0 auto;
-  @media screen and (min-width: 901px) {
+  & .desktop {
+    display:none;
+  }
+  @media screen and (min-width: 900px) {
   & .mobile {
   	display:none;
   }
-  }
-  @media screen and (max-width: 900px) {
   & .desktop {
-  	display:none;
+    display:block;
   }
   }
 `

@@ -1,11 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Carousel, { Dots } from '@brainhubeu/react-carousel';
-import '@brainhubeu/react-carousel/lib/style.css';
+import Carousel, { Dots } from '@brainhubeu/react-carousel'
+import '@brainhubeu/react-carousel/lib/style.css'
+import Img from "react-webp-image"
 
 import Hero1 from '../images/Hero1.jpg'
+import Hero1Webp from '../images/Hero1.webp'
 import Hero1Mobile from '../images/Hero1Mobile.jpg'
+import Hero1MobileWebp from '../images/Hero1Mobile.webp'
 
 
 
@@ -14,14 +17,15 @@ const Slide = styled.div`
   img {
     object-fit: cover;
   }
-  @media screen and (max-width: 900px) {
   & .desktop {
     display: none;
   }
-  }
-  @media screen and (min-width: 901px) {
+  @media screen and (min-width: 900px) {
   & .mobile {
     display: none;
+  }
+  & .desktop {
+    display: block;
   }
   }
 
@@ -34,22 +38,22 @@ const CarouselContainer = styled.div`
 
 const HeroText = styled.div`
   position: absolute;
-  top: 35%;
   left: 10%;
   transform: translateY (-50%);
   color: ${props => props.theme.colors.light};
-  font-size: 2em;
-  p {
-    margin: 20px 0;
-  }
   button {
     background: ${props => props.theme.colors.dark}!important;
   }
-  @media screen and (max-width:900px) {
-    font-size: 1em;
-    top: 30%;
+  font-size: 1em;
+  top: 30%;
     p {
       margin: 10px 0;
+    }
+  @media screen and (min-width:900px) {
+    font-size: 2em;
+    top: 35%;
+     p {
+      margin: 20px 0;
     }
   }
 `
@@ -62,8 +66,8 @@ class HeaderCarousel extends React.Component {
       value: 0,
       slides: [
         (<Slide>
-          <img className="desktop" src={Hero1} alt="Hero 1" />
-          <img className="mobile" src={Hero1Mobile} alt="Hero 1 Mobile"/>
+          <Img className="desktop" src={Hero1} webp={Hero1Webp} alt="Hero 1" />
+          <Img className="mobile" src={Hero1Mobile} webp={Hero1MobileWebp} alt="Hero 1 Mobile"/>
           <HeroText>
           <h2>Title Goes Here</h2>
           <p>Tagline will go right here.</p>
@@ -71,8 +75,8 @@ class HeaderCarousel extends React.Component {
           </HeroText>
          </Slide>),
         (<Slide>
-          <img className="desktop" src={Hero1} alt="Hero 2" />
-          <img className="mobile" src={Hero1Mobile} alt="Hero 2 Mobile" />
+          <Img className="desktop" src={Hero1} webp={Hero1Webp} alt="Hero 2" />
+          <Img className="mobile" src={Hero1Mobile} webp={Hero1MobileWebp} alt="Hero 2 Mobile"/>
           <HeroText>
           <h2>Title Goes Here</h2>
           <p>Tagline will go right here.</p>
@@ -80,8 +84,8 @@ class HeaderCarousel extends React.Component {
           </HeroText>
          </Slide>),
         (<Slide>
-          <img className="desktop" src={Hero1} alt="Hero 3" />
-          <img className="mobile" src={Hero1Mobile} alt="Hero 3 Mobile" />
+          <Img className="desktop" src={Hero1} webp={Hero1Webp} alt="Hero 3" />
+          <Img className="mobile" src={Hero1Mobile} webp={Hero1MobileWebp} alt="Hero 3 Mobile"/>
           <HeroText>
           <h2>Title Goes Here</h2>
           <p>Tagline will go right here.</p>
@@ -89,8 +93,8 @@ class HeaderCarousel extends React.Component {
           </HeroText>
          </Slide>),
          (<Slide>
-          <img className="desktop" src={Hero1} alt="Hero 4"/>
-          <img className="mobile" src={Hero1Mobile} alt="Hero 4 Mobile" />
+          <Img className="desktop" src={Hero1} webp={Hero1Webp} alt="Hero 4" />
+          <Img className="mobile" src={Hero1Mobile} webp={Hero1MobileWebp} alt="Hero 4 Mobile"/>
           <HeroText>
           <h2>Title Goes Here</h2>
           <p>Tagline will go right here.</p>

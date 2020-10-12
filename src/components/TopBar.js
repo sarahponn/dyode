@@ -7,8 +7,9 @@ const Bar = styled.div`
   text-transform: uppercase;
   padding: 10px;
   text-align: center;
-  @media screen and (max-width: 900px) {
-  	font-size: .7em;
+  font-size: .7em;
+  @media screen and (min-width: 900px) {
+  	font-size: 1em;
   }
 `
 

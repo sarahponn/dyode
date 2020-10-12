@@ -15,27 +15,30 @@ const Bar = styled.div`
 `
 
 const Text = styled.div`
-  width: 50%;
+  width: 100%;
   font-weight: 400;
   line-height: 1.4;
-  @media screen and (max-width: 900px) {
-  	width:100%;
-  	text-align:center;
-  	margin-bottom: 20px;
-  	font-size: .8em;
+  text-align:center;
+  margin-bottom: 20px;
+  font-size: .8em;
+  @media screen and (min-width: 900px) {
+  	width:50%;
+    text-align: left;
+    margin: 0;
+    font-size: 1em;
   }
 `
 
 const Form = styled.div`
-  width: 50%;
-  @media screen and (max-width: 900px) {
-  	width:100%;
+  width: 100%;
+  @media screen and (min-width: 900px) {
+  	width: 50%;
   }
 `
 
 const Heading = styled.div`
   color: ${props => props.theme.colors.light};
-  font-size: 1.5em;
+  font-size: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,8 +48,8 @@ const Heading = styled.div`
   	max-width: 25px;
   	margin-right: 15px;
   }
-  @media screen and (max-width: 900px) {
-  	font-size: 1em;
+  @media screen and (min-width: 900px) {
+  	font-size: 1.5em;
   }
 `
 

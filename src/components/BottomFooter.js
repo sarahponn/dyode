@@ -2,9 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import AccordionMenu from '../components/AccordionMenu'
 
+import Img from "react-webp-image"
+
+
 import Facebook from '../images/Facebook.png'
+import FacebookWebp from '../images/Facebook.webp'
 import IG from '../images/IG.png'
+import IGWebp from '../images/IG.webp'
 import Twitter from '../images/Twitter.png'
+import TwitterWebp from '../images/Twitter.webp'
 
 const Bar = styled.div`
   background: ${props => props.theme.colors.dark};
@@ -17,12 +23,12 @@ const Bar = styled.div`
 `
 
 const Nav = styled.div`
-  width: 85%;
-  font-weight: 400;
-  line-height: 1.4;
-  display: flex;
-  @media screen and (max-width: 900px) {
-    display: none;
+  display:none;
+  @media screen and (min-width: 900px) {
+    width: 85%;
+    font-weight: 400;
+    line-height: 1.4;
+    display: flex;
   }
 
 `
@@ -32,7 +38,7 @@ const MobileNav = styled.div`
   font-weight: 400;
   line-height: 1.4;
   margin: 20px;
-  @media screen and (min-width: 901px) {
+  @media screen and (min-width: 900px) {
     display: none;
   }
 
@@ -53,10 +59,11 @@ const List = styled.ul`
 `
 
 const Social = styled.div`
-  width: 15%;
-  @media screen and (max-width: 900px) {
-    width: 100%;
-    margin: 20px;
+  width: 100%;
+  margin: 20px;
+  @media screen and (min-width: 900px) {
+     width: 15%;
+     margin: 0;
   }
 
 
@@ -101,9 +108,9 @@ const BottomFooter = () => {
   <Social>
     <h2>Follow Us</h2>
     <Icons>
-      <img src={Facebook} alt="Facebook" />
-      <img src={IG} alt="Instagram" />
-      <img src={Twitter} alt="Twitter" />
+      <Img src={Facebook} webp={FacebookWebp} alt="Facebook" />
+      <Img src={IG} webp={IGWebp} alt="Instagram" />
+      <Img src={Twitter}  webp={TwitterWebp} alt="Twitter" />
     </Icons>
   </Social>
   </Bar>

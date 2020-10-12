@@ -6,10 +6,10 @@ import { MdMenu, MdShoppingCart, MdClose } from 'react-icons/md'
 const Bar = styled.div`
   background: ${props => props.theme.colors.highlight};
   color: ${props => props.theme.colors.light};
-  padding: 15px;
+  padding: 10px;
   position: relative;
-  @media screen and (max-width: 900px) {
-    padding: 10px;
+  @media screen and (min-width: 900px) {
+    padding: 15px;
   }
   `
 
@@ -23,13 +23,15 @@ const Bar = styled.div`
   	padding-bottom: 10px;
   }
   li {
-  	padding: 0 10px;
-  	font-size: 1.1em;
-  	cursor: pointer;
-  }
-  @media screen and (max-width: 900px) {
+  	display: none;
+   }
+  @media screen and (min-width: 900px) {
     li {
-      display: none;
+      display: block;
+      padding: 0 10px;
+      font-size: 1.1em;
+      cursor: pointer;
+
     }
   }
   `
@@ -41,7 +43,7 @@ const Hamburger = styled.div`
   left: 10px;
   color: #ffffff;
   font-size: 1.4em;
-  @media screen and (min-width: 901px) {
+  @media screen and (min-width: 900px) {
     display: none;
   }
 `
@@ -52,7 +54,7 @@ const Cart = styled.div`
   right: 10px;
   color: #ffffff;
   font-size: 1.4em;
-  @media screen and (min-width: 901px) {
+  @media screen and (min-width: 900px) {
     display: none;
   }
 `

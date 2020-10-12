@@ -9,9 +9,9 @@ const theme = {
     maxWidthCentered: '650px',
   },
   responsive: {
-    small: '35em',
-    medium: '50em',
-    large: '70em',
+    small: '500px',
+    medium: '900px',
+    large: '1400px',
   },
 }
 
